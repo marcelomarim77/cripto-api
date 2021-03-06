@@ -1,16 +1,20 @@
 import { Injectable } from '@nestjs/common';
 import fs = require('fs');
 
+import { CriptoDto } from './dtos/cripto.dto';
+
 @Injectable()
 export class AppService {
 
     async getCriptografar(msg: string) {
-        const cripto: string = this.criptografar(msg);
+        const cripto = new CriptoDto();
+        cripto.resultado = this.criptografar(msg);
         return cripto;
     }
         
     async getDescriptografar(msg: string) {
-        const descripto: string = this.descriptografar(msg);
+        const descripto = new CriptoDto();
+        descripto.resultado = this.descriptografar(msg);
         return descripto;
     }
 

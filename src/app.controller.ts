@@ -7,11 +7,11 @@ export class AppController {
 
     @Get('/decrypt/:msg')
     async getDecrypt(@Param('msg') msg: string) {
-        return this.appService.getDescriptografar(msg);
+        return await this.appService.getDescriptografar(msg);
     }
 
     @Get('/crypt/:msg')
     async getCrypt(@Param('msg') msg: string) {
-        return this.appService.getCriptografar(msg);
+        return await this.appService.getCriptografar(msg);
     }
 }
