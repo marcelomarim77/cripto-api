@@ -24,8 +24,8 @@ export class AppService {
 
         let cripto: string = '';
         for (let i = 0; i < msg.length; i++) {
-            const secret = secrets[msg.substring(i, i+1).toLowerCase()];
-            cripto += secret.key.toUpperCase();
+            const secret = secrets[msg.substring(i, i+1)];
+            cripto += secret.key;
         }
 
         return cripto;
@@ -37,8 +37,8 @@ export class AppService {
 
         let descripto: string = '';
         for (let i = 0; i < msg.length; i++) {
-            const secret = secrets[msg.substring(i, i+1).toLowerCase()];
-            descripto += secret.key.toUpperCase();
+            const secret = secrets[msg.substring(i, i+1)];
+            descripto += secret.key;
         }
 
         return descripto;
