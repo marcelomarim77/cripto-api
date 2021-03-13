@@ -1,3 +1,6 @@
+import { IsString } from 'class-validator';
 export class CriptoDto {
-    resultado: string = '';
+
+    @IsString()
+    resultado: string;
 }
